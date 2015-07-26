@@ -6,15 +6,9 @@ This library is dedicated for "អូនស្អាតរបស់បង"
 
 ## Preview
 
-<img src="https://raw.githubusercontent.com/Friend-LGA/ReadmeFiles/master/LGAlertView/Preview.gif" width="230"/>
-<img src="https://raw.githubusercontent.com/Friend-LGA/ReadmeFiles/master/LGAlertView/1.png" width="230"/>
-<img src="https://raw.githubusercontent.com/Friend-LGA/ReadmeFiles/master/LGAlertView/2.png" width="230"/>
-<img src="https://raw.githubusercontent.com/Friend-LGA/ReadmeFiles/master/LGAlertView/3.png" width="230"/>
-<img src="https://raw.githubusercontent.com/Friend-LGA/ReadmeFiles/master/LGAlertView/4.png" width="230"/>
-<img src="https://raw.githubusercontent.com/Friend-LGA/ReadmeFiles/master/LGAlertView/5.png" width="230"/>
-<img src="https://raw.githubusercontent.com/Friend-LGA/ReadmeFiles/master/LGAlertView/6.png" width="230"/>
-<img src="https://raw.githubusercontent.com/Friend-LGA/ReadmeFiles/master/LGAlertView/7.png" width="230"/>
-<img src="https://raw.githubusercontent.com/Friend-LGA/ReadmeFiles/master/LGAlertView/8.png" width="230"/>
+<img src="https://www.dropbox.com/s/029ghv4rho0h4qs/1.png?dl=0" width="230"/>
+<img src="https://www.dropbox.com/s/ww4y1qplo6jk2z0/2.png?dl=0" width="230"/>
+<img src="https://www.dropbox.com/s/3ab63d5sfsdm0zg/3.png?dl=0" width="230"/>
 
 ## Usage
 
