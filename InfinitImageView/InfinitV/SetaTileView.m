@@ -1,9 +1,12 @@
 //
 //  SetaTileView.m
-//  VRecommend
+//  InfiniteImageView
 //
 //  Created by cheamseta on 3/15/14.
 //  Copyright (c) 2014 cheamseta. All rights reserved.
+//
+//  This library is dedicated for "អូនស្អាតរបស់បង"
+//
 //
 
 #import "SetaTileView.h"
@@ -20,31 +23,32 @@
 
 @interface SetaTileView()
 {
-  NSUInteger albums;
+  NSUInteger imageCounter;
   BOOL isDone;
   int columns;
   int limit;
 }
 
-@property (strong, nonatomic) UIImageView *imageView;
-@property (nonatomic, strong)  NSMutableArray *recommendCollections;
+@property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, strong)  NSArray *imageArray;
 
 @end
 
 
 @implementation SetaTileView
-@synthesize recommendCollections;
+@synthesize imageArray;
+
 + (Class)layerClass {
   return [setaTileLayer class];
 }
 
-- (id)initWithFrame:(CGRect)frame withArray:(NSArray *)array
+- (id)initWithArray:(NSArray *)array
 {
-  if ((self = [super initWithFrame:frame])) {
-    self.recommendCollections = [[NSMutableArray alloc] initWithArray:array];
+  if ((self = [super init])) {
+    self.imageArray = array;
     setaTileLayer *tiledLayer = (setaTileLayer *)[self layer];
     CGFloat sf = self.contentScaleFactor;
-    tiledLayer.tileSize = CGSizeMake(SIZE*sf, SIZE*sf);
+    tiledLayer.tileSize = CGSizeMake(SIZE * sf, SIZE * sf);
     isDone = YES;
   }
   return self;
@@ -61,21 +65,49 @@
 
 - (UIImage *)tileAtPosition:(int)position
 {
-  albums = [self.recommendCollections count];
-  int index = position%albums;
+  imageCounter = [self.imageArray count];
+  int index = position % imageCounter;
   
-  UIImage * image = [self.recommendCollections objectAtIndex:index];
+  UIImage * image = nil;
+  if ([[self.imageArray objectAtIndex:index] isKindOfClass:[UIImage class]]){
+    image = [self.imageArray objectAtIndex:index];
+  }else{
+    NSDictionary *imageDict = [self.imageArray objectAtIndex:index];
+    // appended string to create flick image path url
+    NSString * flickImageUrl = [NSString stringWithFormat:@"https://farm%@.staticflickr.com/%@/%@_%@.jpg",
+                                imageDict[@"farm"],
+                                imageDict[@"server"],
+                                imageDict[@"id"],
+                                imageDict[@"secret"]];
+    
+    image =  [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:flickImageUrl]]];
+  }
+  
   return image;
 }
 
-- (NSDictionary *)collectionFromTouch:(CGPoint)touchPoint {
+- (UIImage *)imageFromPostion:(CGPoint)touchPoint {
   int col = touchPoint.x / SIZE;
   int row = touchPoint.y / SIZE;
-  int position = row*columns+col;
-  int index = position%albums;
+  int position = row * columns + col;
+  int index = position % imageCounter;
   
-  NSDictionary *VremmDic = [self.recommendCollections objectAtIndex:index];
-  return VremmDic;
+  UIImage *image = nil;
+  
+  if ([[self.imageArray objectAtIndex:index] isKindOfClass:[UIImage class]]){
+    image = [self.imageArray objectAtIndex:index];
+  }else{
+    NSDictionary *imageDict = [self.imageArray objectAtIndex:index];
+    // appended string to create flick image path url
+    NSString * flickImageUrl = [NSString stringWithFormat:@"https://farm%@.staticflickr.com/%@/%@_%@.jpg",
+                                imageDict[@"farm"],
+                                imageDict[@"server"],
+                                imageDict[@"id"],
+                                imageDict[@"secret"]];
+    
+    image =  [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:flickImageUrl]]];
+  }
+  return image;
 }
 
 @end

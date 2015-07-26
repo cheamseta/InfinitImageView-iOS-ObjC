@@ -5,6 +5,7 @@
 //  Created by seta cheam on 26/7/2015.
 //  Copyright (c) 2015 seta cheam. All rights reserved.
 //
+//  This library is dedicated for "អូនស្អាតរបស់បង"
 
 #import "InfinitScrollView.h"
 #import "SetaTileView.h"
@@ -26,7 +27,8 @@
     [self setDecelerationRate:UIScrollViewDecelerationRateFast];
     
     CGRect inifinitFrame = CGRectMake(0, 0, BIG, BIG);
-    SetaTileView *tiles = [[SetaTileView alloc] initWithFrame:inifinitFrame withArray:array];
+    SetaTileView *tiles = [[SetaTileView alloc] initWithArray:array];
+    [tiles setFrame:inifinitFrame];
     [self addSubview:tiles];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
@@ -45,11 +47,12 @@
   SetaTileView *tiles = (SetaTileView *)tap.view;
   
   CGPoint tapPoint = [tap locationInView:tiles];
-  //NSDictionary *VrecomDic = [tiles collectionFromTouch:tapPoint];
+  UIImage *image = [tiles imageFromPostion:tapPoint];
   
-  //  DetailViewController *detailVC = [[DetailViewController alloc] init];
-  //  [detailVC setRecommendId:VrecomDic[@"_id"]];
-  //  [self.navigationController pushViewController:detailVC animated:YES];
+  if ([self.infinitDelegate respondsToSelector:@selector(InfinitScrollView:didTapOnImage:)]){
+    [self.infinitDelegate InfinitScrollView:self didTapOnImage:image];
+  }
+  
 }
 
 @end
