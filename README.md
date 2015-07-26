@@ -8,7 +8,7 @@ This library is dedicated for "អូនស្អាតរបស់បង"
 
 <img src="https://dl.dropboxusercontent.com/u/46009114/github/InfinitImageView/1.png" width="230"/>
 <img src="https://dl.dropboxusercontent.com/u/46009114/github/InfinitImageView/2.png" width="230"/>
-<img src="https://dl.dropboxusercontent.com/u/46009114/github/InfinitImageView/3.png0" width="230"/>
+<img src="https://dl.dropboxusercontent.com/u/46009114/github/InfinitImageView/3.png" width="230"/>
 
 ## Usage
 
