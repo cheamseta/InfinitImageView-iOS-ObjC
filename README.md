@@ -50,4 +50,4 @@ This technology was used in VRecommend - a trusted peer-2-peer recommendation - 
 
 ## License
 
-LGAlertView is released under the MIT license. See [LICENSE](https://raw.githubusercontent.com/Friend-LGA/LGAlertView/master/LICENSE) for details.
+LGAlertView is released under the MIT license.
