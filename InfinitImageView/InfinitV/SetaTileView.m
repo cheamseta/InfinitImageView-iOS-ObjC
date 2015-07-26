@@ -64,10 +64,7 @@
   albums = [self.recommendCollections count];
   int index = position%albums;
   
-  NSDictionary *VremmDic = [self.recommendCollections objectAtIndex:index];
-  NSURL *url = [NSURL URLWithString:nil];
-  UIImage *image =  [UIImage imageWithData:[NSData dataWithContentsOfURL:url]];
-  
+  UIImage * image = [self.recommendCollections objectAtIndex:index];
   return image;
 }
 

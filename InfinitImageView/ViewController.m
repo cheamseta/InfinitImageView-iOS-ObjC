@@ -7,16 +7,34 @@
 //
 
 #import "ViewController.h"
+#import "InfinitScrollView.h"
 
 @interface ViewController ()
-
+@property (nonatomic, strong) InfinitScrollView * infinitScrollView;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  // Do any additional setup after loading the view, typically from a nib.
+  [self loadInfinitLocalImage];
+}
+
+- (void)loadInfinitLocalImage {
+  
+  NSArray * localImageArray = @[
+                                [UIImage imageNamed:@"1.jpg"],
+                                [UIImage imageNamed:@"2.jpg"],
+                                [UIImage imageNamed:@"3.jpg"]
+                                ];
+  
+  self.infinitScrollView = [[InfinitScrollView alloc] initWithFrame:self.view.frame withArray:localImageArray];
+  [self.view addSubview:self.infinitScrollView];
+  
+}
+
+- (void)loadInfinitRemoteImage {
+  
 }
 
 - (void)didReceiveMemoryWarning {

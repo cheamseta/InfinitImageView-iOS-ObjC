@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface InfinitScrollView : UIScrollView
-
+- (id)initWithFrame:(CGRect)frame withArray:(NSArray *)array;
 @end

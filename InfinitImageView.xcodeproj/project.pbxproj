@@ -16,8 +16,10 @@
 		FD1962A81B649C66000742F1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD1962A61B649C66000742F1 /* LaunchScreen.xib */; };
 		FD1962B41B649C66000742F1 /* InfinitImageViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1962B31B649C66000742F1 /* InfinitImageViewTests.m */; };
 		FDD38F151B649D1500F2B319 /* InfinitScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD38F101B649D1500F2B319 /* InfinitScrollView.m */; };
-		FDD38F161B649D1500F2B319 /* InfinitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD38F121B649D1500F2B319 /* InfinitViewController.m */; };
 		FDD38F171B649D1500F2B319 /* SetaTileView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDD38F141B649D1500F2B319 /* SetaTileView.m */; };
+		FDD38F1C1B64A12100F2B319 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDD38F191B64A12100F2B319 /* 1.jpg */; };
+		FDD38F1D1B64A12100F2B319 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDD38F1A1B64A12100F2B319 /* 2.jpg */; };
+		FDD38F1E1B64A12100F2B319 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDD38F1B1B64A12100F2B319 /* 3.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,10 +51,11 @@
 		FD1962B31B649C66000742F1 /* InfinitImageViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfinitImageViewTests.m; sourceTree = "<group>"; };
 		FDD38F0F1B649D1500F2B319 /* InfinitScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfinitScrollView.h; sourceTree = "<group>"; };
 		FDD38F101B649D1500F2B319 /* InfinitScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfinitScrollView.m; sourceTree = "<group>"; };
-		FDD38F111B649D1500F2B319 /* InfinitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfinitViewController.h; sourceTree = "<group>"; };
-		FDD38F121B649D1500F2B319 /* InfinitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfinitViewController.m; sourceTree = "<group>"; };
 		FDD38F131B649D1500F2B319 /* SetaTileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetaTileView.h; sourceTree = "<group>"; };
 		FDD38F141B649D1500F2B319 /* SetaTileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetaTileView.m; sourceTree = "<group>"; };
+		FDD38F191B64A12100F2B319 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		FDD38F1A1B64A12100F2B319 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		FDD38F1B1B64A12100F2B319 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,7 @@
 		FD1962961B649C66000742F1 /* InfinitImageView */ = {
 			isa = PBXGroup;
 			children = (
+				FDD38F181B64A06200F2B319 /* Images */,
 				FDD38F0E1B649D1500F2B319 /* InfinitV */,
 				FD19629B1B649C66000742F1 /* AppDelegate.h */,
 				FD19629C1B649C66000742F1 /* AppDelegate.m */,
@@ -158,12 +162,20 @@
 			children = (
 				FDD38F0F1B649D1500F2B319 /* InfinitScrollView.h */,
 				FDD38F101B649D1500F2B319 /* InfinitScrollView.m */,
-				FDD38F111B649D1500F2B319 /* InfinitViewController.h */,
-				FDD38F121B649D1500F2B319 /* InfinitViewController.m */,
 				FDD38F131B649D1500F2B319 /* SetaTileView.h */,
 				FDD38F141B649D1500F2B319 /* SetaTileView.m */,
 			);
 			path = InfinitV;
+			sourceTree = "<group>";
+		};
+		FDD38F181B64A06200F2B319 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FDD38F191B64A12100F2B319 /* 1.jpg */,
+				FDD38F1A1B64A12100F2B319 /* 2.jpg */,
+				FDD38F1B1B64A12100F2B319 /* 3.jpg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +261,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD1962A31B649C66000742F1 /* Main.storyboard in Resources */,
+				FDD38F1C1B64A12100F2B319 /* 1.jpg in Resources */,
+				FDD38F1D1B64A12100F2B319 /* 2.jpg in Resources */,
+				FDD38F1E1B64A12100F2B319 /* 3.jpg in Resources */,
 				FD1962A81B649C66000742F1 /* LaunchScreen.xib in Resources */,
 				FD1962A51B649C66000742F1 /* Images.xcassets in Resources */,
 			);
@@ -304,7 +319,6 @@
 				FD1962A01B649C66000742F1 /* ViewController.m in Sources */,
 				FDD38F151B649D1500F2B319 /* InfinitScrollView.m in Sources */,
 				FD19629D1B649C66000742F1 /* AppDelegate.m in Sources */,
-				FDD38F161B649D1500F2B319 /* InfinitViewController.m in Sources */,
 				FD19629A1B649C66000742F1 /* main.m in Sources */,
 				FDD38F171B649D1500F2B319 /* SetaTileView.m in Sources */,
 			);
