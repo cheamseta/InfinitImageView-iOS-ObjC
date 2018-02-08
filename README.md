@@ -6,9 +6,8 @@ This library is dedicated for "អូនស្អាតរបស់បង"
 
 ## Preview
 
-<img src="https://dl.dropboxusercontent.com/u/46009114/github/InfinitImageView/1.png" width="230"/>
-<img src="https://dl.dropboxusercontent.com/u/46009114/github/InfinitImageView/2.png" width="230"/>
-<img src="https://dl.dropboxusercontent.com/u/46009114/github/InfinitImageView/3.png" width="230"/>
+<img src="https://firebasestorage.googleapis.com/v0/b/hubgit-cea1c.appspot.com/o/infitImg1.png?alt=media&token=a756e847-0480-4317-b46b-97d145670f63" width="230"/>
+<img src="https://firebasestorage.googleapis.com/v0/b/hubgit-cea1c.appspot.com/o/infitImg2.png?alt=media&token=b37b3997-7f63-4b23-b5c0-9902c2fee9a5" width="230"/>
 
 ## Usage
 
@@ -44,10 +43,3 @@ To handle actions you can use initialization methods with blocks or delegate, or
 - (void)InfinitScrollView:(InfinitScrollView *)scrollView didTapOnImage:(UIImage *)image;
 ```
 
-### More
-
-This technology was used in VRecommend - a trusted peer-2-peer recommendation - https://itunes.apple.com/kh/app/vrecommend/id870647274?mt=8
-
-## License
-
-LGAlertView is released under the MIT license.
